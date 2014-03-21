@@ -109,6 +109,10 @@
 #   Boolean, Enable/Disable.
 #   Default: false
 #
+# [*cn_duplicate*]
+#   Boolean, Enable/Disable.
+#   Default: false
+#
 # === Examples
 #
 #   openvpn::client {
@@ -170,6 +174,7 @@ define openvpn::server(
   $tcp_nodelay = false,
   $ccd_exclusive = false,
   $pam = false,
+  $duplicate_cn = false,
 ) {
 
   include openvpn
